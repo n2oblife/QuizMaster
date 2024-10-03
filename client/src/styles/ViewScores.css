@@ -1,0 +1,18 @@
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
+function ViewScores() {
+  const { id } = useParams();
+  const [scores, setScores] = useState([]);
+
+  // Fetch scores from server
+  useEffect(() => {
+    // Fetch scores from server using the quiz ID
+  }, [id]);
+
+  return (
+    // Render scores in a table
+  );
+}
+
+export default ViewScores;

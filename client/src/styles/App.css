@@ -1,0 +1,25 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreateQuiz from './CreateQuiz';
+import TakeQuiz from './TakeQuiz';
+import ViewScores from './ViewScores';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/create-quiz">
+          <CreateQuiz />
+        </Route>
+        <Route path="/take-quiz/:id">
+          <TakeQuiz />
+        </Route>
+        <Route path="/view-scores/:id">
+          <ViewScores />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;

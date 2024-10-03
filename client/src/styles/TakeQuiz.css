@@ -1,0 +1,35 @@
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
+function TakeQuiz() {
+  const { id } = useParams();
+  const [quiz, setQuiz] = useState(null);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [timeRemaining, setTimeRemaining] = useState(10);
+
+  // Fetch quiz data from server
+  useEffect(() => {
+    // Fetch quiz data from server using the quiz ID
+  }, [id]);
+
+  // Handle answering a question
+  const handleAnswerQuestion = (answer) => {
+    // Check if answer is correct
+    // Update score based on time remaining
+    // Move to next question
+  };
+
+  // Decrement time remaining every second
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeRemaining(timeRemaining - 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [timeRemaining]);
+
+  return (
+    // Render current question and timer
+  );
+}
+
+export default TakeQuiz;

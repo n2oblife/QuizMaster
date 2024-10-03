@@ -1,0 +1,30 @@
+import React, { useState } from 'react';
+
+function CreateQuiz() {
+  const [title, setTitle] = useState('');
+  const [questions, setQuestions] = useState([]);
+
+  // Handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Send data to server to create new quiz
+  };
+
+  // Handle adding a new question
+  const handleAddQuestion = () => {
+    setQuestions([...questions, { text: '', file: null }]);
+  };
+
+  // Handle changing the text or file of a question
+  const handleQuestionChange = (index, field, value) => {
+    const newQuestions = [...questions];
+    newQuestions[index][field] = value;
+    setQuestions(newQuestions);
+  };
+
+  return (
+    // Render form for creating a new quiz
+  );
+}
+
+export default CreateQuiz;
